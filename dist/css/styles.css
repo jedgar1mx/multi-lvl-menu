@@ -528,13 +528,31 @@ img {
     right: -30em;
     overflow-y: auto; }
     .nav .nav-container .nav-item {
-      padding: .5em;
       background-color: #004544;
-      color: #fff;
-      cursor: pointer; }
-    .nav .nav-container .nav-item:hover {
-      background-color: #E48F22;
-      color: #004544; }
+      display: flex; }
+      .nav .nav-container .nav-item a {
+        color: #fff;
+        text-decoration: none;
+        flex: 1;
+        display: flex;
+        border-bottom: 0.1em solid #fff; }
+        .nav .nav-container .nav-item a span {
+          margin: auto 0;
+          padding: .5em; }
+      .nav .nav-container .nav-item a:hover {
+        background-color: #E48F22; }
+      .nav .nav-container .nav-item .sub-items-btn {
+        width: 5em;
+        text-align: center;
+        padding: 1em;
+        font-weight: bold;
+        color: #fff;
+        border-left: 0.1em solid #fff;
+        cursor: pointer;
+        border-bottom: 0.1em solid #fff; }
+      .nav .nav-container .nav-item .sub-items-btn:hover {
+        background-color: #E48F22;
+        border-color: #E48F22; }
   .nav .active.nav-container {
     transition: right 500ms ease;
     right: 0; }

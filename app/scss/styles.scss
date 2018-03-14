@@ -166,14 +166,40 @@ img{width: 100%;}
     overflow-y: auto;
 
     .nav-item{
-      padding: .5em;
       background-color: $color-1;
-      color: $white;
-      cursor: pointer;
-    }
-    .nav-item:hover{
-      background-color: $color-3;
-      color: $color-1;
+      display: flex;
+
+      a{
+        color: $white;
+        text-decoration: none;
+        flex: 1;
+        display: flex;
+        border-bottom: .1em solid $white;
+
+        span{
+          margin: auto 0;
+          padding: .5em;
+        }
+      }
+      a:hover{
+        background-color: $color-3;
+      }
+
+      .sub-items-btn{
+        width: 5em;
+        text-align: center;
+        padding: 1em;
+        font-weight: bold;
+        color: $white;
+        border-left: .1em solid $white;
+        cursor: pointer;
+        border-bottom: .1em solid $white;
+      }
+
+      .sub-items-btn:hover{
+        background-color: $color-3;
+        border-color: $color-3;
+      }
     }
   }
 
