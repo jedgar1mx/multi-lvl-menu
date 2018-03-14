@@ -1,0 +1,146 @@
+#map-side-panel-small {
+  position: fixed;
+  top: 4em;
+  left: -25em;
+  width: 25em;
+  height: calc(100vh - 4em);
+  overflow-y: auto;
+  z-index: 1;
+  background-color: #fff;
+  padding: 1em;
+  transition: all 500ms ease; }
+  #map-side-panel-small .box {
+    position: relative; }
+    #map-side-panel-small .box h2 {
+      color: #CF3234;
+      font-size: 1.5em;
+      font-weight: bold; }
+    #map-side-panel-small .box .sub-box {
+      background-color: #9fd5b3; }
+    #map-side-panel-small .box p {
+      padding: .5em .25em;
+      margin: 0; }
+    #map-side-panel-small .box p:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.6); }
+
+#map-data-panel, #settings-map-panel, #buffer-panel {
+  position: fixed;
+  top: 4em;
+  left: -25em;
+  width: 25em;
+  height: calc(100vh - 4em);
+  overflow-y: auto;
+  z-index: 1;
+  background-color: #fff;
+  padding: 1em;
+  transition: all 500ms ease; }
+  #map-data-panel .box, #settings-map-panel .box, #buffer-panel .box {
+    position: relative; }
+    #map-data-panel .box h2, #settings-map-panel .box h2, #buffer-panel .box h2 {
+      color: #CF3234;
+      font-size: 1.5em;
+      font-weight: bold; }
+  #map-data-panel .layers-list, #settings-map-panel .layers-list, #buffer-panel .layers-list {
+    padding-top: 1em; }
+    #map-data-panel .layers-list div, #settings-map-panel .layers-list div, #buffer-panel .layers-list div {
+      padding: .5em 1em; }
+    #map-data-panel .layers-list div.active, #settings-map-panel .layers-list div.active, #buffer-panel .layers-list div.active {
+      background-color: #efbd7d; }
+
+#map-side-panel {
+  position: fixed;
+  top: 4em;
+  left: 100vw;
+  width: calc(100vw - 4em);
+  height: calc(100vh - 4em);
+  overflow-y: auto;
+  z-index: 1;
+  background-color: #fff;
+  padding: 1em;
+  transition: all 500ms ease; }
+  #map-side-panel .box {
+    position: relative; }
+  #map-side-panel .panel-information {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header badges ." "owner property demos" "sales permits blight";
+    grid-column-gap: 1em;
+    grid-row-gap: 1.5em; }
+    #map-side-panel .panel-information .info-section {
+      position: relative;
+      background-color: #9fd5b3;
+      padding: 1em;
+      color: #004544; }
+      #map-side-panel .panel-information .info-section span {
+        position: absolute;
+        top: -1em;
+        padding: .3em .5em;
+        background-color: #E48F22;
+        color: #004544;
+        font-weight: bold; }
+      #map-side-panel .panel-information .info-section p {
+        padding: .5em .25em;
+        margin: 0; }
+      #map-side-panel .panel-information .info-section p:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.6); }
+      #map-side-panel .panel-information .info-section div {
+        background-color: rgba(255, 255, 255, 0.6);
+        margin-bottom: .5em; }
+        #map-side-panel .panel-information .info-section div p {
+          padding: .25em; }
+        #map-side-panel .panel-information .info-section div p:nth-child(odd) {
+          background-color: transparent; }
+    #map-side-panel .panel-information h2 {
+      grid-area: header;
+      color: #CF3234;
+      font-size: 1.5em;
+      font-weight: bold; }
+    #map-side-panel .panel-information .badges {
+      grid-area: badges; }
+      #map-side-panel .panel-information .badges span {
+        padding: .5em 1em;
+        font-weight: bold;
+        margin-right: 1em; }
+      #map-side-panel .panel-information .badges span.active {
+        background-color: #004544;
+        color: #fff; }
+      #map-side-panel .panel-information .badges span.inactive {
+        background-color: #CF3234;
+        color: #fff; }
+    #map-side-panel .panel-information .section-property {
+      grid-area: property; }
+    #map-side-panel .panel-information .section-owner {
+      grid-area: owner; }
+    #map-side-panel .panel-information .section-blight {
+      grid-area: blight; }
+    #map-side-panel .panel-information .section-sales {
+      grid-area: sales; }
+    #map-side-panel .panel-information .section-permits {
+      grid-area: permits; }
+    #map-side-panel .panel-information .section-demos {
+      grid-area: demos; }
+
+#map-side-panel.active, #map-data-panel.active, #settings-map-panel.active, #buffer-panel.active {
+  left: 0;
+  transition: all 500ms ease; }
+
+#map-side-panel-small.active {
+  left: 0;
+  transition: all 500ms ease; }
+
+#hidde-panel-btn, #hidde-panel-small-btn, #hidde-map-data-btn, #hidde-settings-btn, #hidde-buffer-panel-btn {
+  position: absolute;
+  top: -.5em;
+  right: 0;
+  padding: .5em 1em;
+  background-color: #CF3234;
+  color: #fff;
+  font-weight: bold;
+  transition: all 500ms ease;
+  cursor: pointer; }
+
+#hidde-panel-btn:hover, #hidde-panel-small-btn:hover, #hidde-map-data-btn:hover, #hidde-settings-btn:hover, #hidde-buffer-panel-btn:hover {
+  padding: .7em 1.15em;
+  background-color: #d44748;
+  transition: all 500ms ease; }
