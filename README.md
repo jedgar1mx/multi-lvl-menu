@@ -1,5 +1,5 @@
-# Boarding Brigade
-Help keep track of the home boarding program for the City of Detroit.
+# Multi Lvl Menu
+Simple Responsive menu.
 
 # Install
 Clone the project. Run `npm install` inside the project folder

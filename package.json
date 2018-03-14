@@ -5,7 +5,7 @@
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CityOfDetroit/boarding_brigade.git"
+    "url": "https://github.com/jedgar1mx/multi-lvl-menu.git"
   },
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
