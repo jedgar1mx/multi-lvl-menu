@@ -500,6 +500,7 @@ img {
   right: -30em;
   width: 30em;
   height: 100vh;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   background-color: #9fd5b3;
@@ -521,21 +522,22 @@ img {
       right: 6.5em; }
   .nav .nav-container {
     width: 30em;
-    height: 100vh;
+    max-width: 100%;
+    height: calc(100vh - 5em);
     position: fixed;
     transition: right 500ms ease;
     top: 5em;
     right: -30em;
+    background-color: #004544;
     overflow-y: auto; }
     .nav .nav-container .nav-item {
-      background-color: #004544;
       display: flex; }
       .nav .nav-container .nav-item a {
         color: #fff;
         text-decoration: none;
+        padding: .5em;
         flex: 1;
-        display: flex;
-        border-bottom: 0.1em solid #fff; }
+        display: flex; }
         .nav .nav-container .nav-item a span {
           margin: auto 0;
           padding: .5em; }
@@ -547,12 +549,16 @@ img {
         padding: 1em;
         font-weight: bold;
         color: #fff;
-        border-left: 0.1em solid #fff;
-        cursor: pointer;
-        border-bottom: 0.1em solid #fff; }
-      .nav .nav-container .nav-item .sub-items-btn:hover {
-        background-color: #E48F22;
-        border-color: #E48F22; }
+        background-color: #005f5d;
+        cursor: pointer; }
+      .nav .nav-container .nav-item .back {
+        padding: 1em;
+        font-weight: bold;
+        color: #fff;
+        background-color: #005f5d;
+        cursor: pointer; }
+      .nav .nav-container .nav-item .sub-items-btn:hover, .nav .nav-container .nav-item .back:hover {
+        background-color: #E48F22; }
   .nav .active.nav-container {
     transition: right 500ms ease;
     right: 0; }

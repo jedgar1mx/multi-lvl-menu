@@ -21,15 +21,40 @@ import Controller from './controller.class.js';
   };
   let navLevelChange = function navLevelChange(ev){
     console.log(ev);
+    let pastClass = ev.target.nextElementSibling.className.split(' ');
+    console.log(pastClass);
+    let tempClass = '';
+    let newClass = 'active ' + ev.target.nextElementSibling.className;
+    ev.target.nextElementSibling.className = newClass;
+  };
+  let navBackLevel = function navBackLevel(ev){
+    console.log(ev);
+    let parentClass = ev.target.parentNode.className.split(' ');
+    let newClass = '';
+    let counter = 0;
+    parentClass.forEach(function(c){
+      if(c != "active") {
+        newClass += c;
+        (counter < (parentClass.length - 2)) ? newClass += ' ' : 0;
+      }
+    });
+    console.log(newClass);
+    ev.target.parentNode.className = newClass;
   };
   console.log('starting js');
   document.getElementById('menu').addEventListener('change', function(e){
     menuToggle(e);
   });
-  let navItems = document.querySelectorAll('.nav-item');
+  let navItems = document.querySelectorAll('.sub-items-btn');
   navItems.forEach(function(item){
     item.addEventListener('click', function(e){
       navLevelChange(e);
+    });
+  });
+  let navBackItems = document.querySelectorAll('.back');
+  navBackItems.forEach(function(item){
+    item.addEventListener('click', function(e){
+      navBackLevel(e);
     });
   });
 })(window);

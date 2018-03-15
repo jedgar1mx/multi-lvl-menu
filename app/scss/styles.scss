@@ -131,6 +131,7 @@ img{width: 100%;}
 	right: -30em;
 	width: 30em;
 	height: 100vh;
+  max-width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: $color-2;
@@ -158,23 +159,24 @@ img{width: 100%;}
 
   .nav-container{
     width: 30em;
-    height: 100vh;
+    max-width: 100%;
+    height: calc(100vh - 5em);
     position: fixed;
     transition: right $base-duration ease;
     top: 5em;
     right: -30em;
+    background-color: $color-1;
     overflow-y: auto;
 
     .nav-item{
-      background-color: $color-1;
       display: flex;
 
       a{
         color: $white;
         text-decoration: none;
+        padding: .5em;
         flex: 1;
         display: flex;
-        border-bottom: .1em solid $white;
 
         span{
           margin: auto 0;
@@ -191,14 +193,20 @@ img{width: 100%;}
         padding: 1em;
         font-weight: bold;
         color: $white;
-        border-left: .1em solid $white;
+        background-color: lighten($color-1, 5%);
         cursor: pointer;
-        border-bottom: .1em solid $white;
       }
 
-      .sub-items-btn:hover{
+      .back{
+        padding: 1em;
+        font-weight: bold;
+        color: $white;
+        background-color: lighten($color-1, 5%);
+        cursor: pointer;
+      }
+
+      .sub-items-btn:hover, .back:hover{
         background-color: $color-3;
-        border-color: $color-3;
       }
     }
   }
@@ -211,8 +219,7 @@ img{width: 100%;}
 // ====================== mobile end ========================
 @media all and (min-width: 401px) {
   .nav {
-    .panel-content{
-    }
+
   }
 }
 // ======================= header end =====================
