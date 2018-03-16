@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900');
-@import "radio.scss";
-@import "loader.scss";
-@import "panel.scss";
-@import "toggle.scss";
 $base-duration: 500ms;
 $cubic: cubic-bezier(.64,.09,.08,1);
 // Colors
@@ -217,9 +213,3 @@ img{width: 100%;}
   }
 }
 // ====================== mobile end ========================
-@media all and (min-width: 401px) {
-  .nav {
-
-  }
-}
-// ======================= header end =====================
